@@ -15,7 +15,7 @@ RUN apt-get update && apt-get --assume-yes install -y \
 ENV ROS_WS=/opt/ros_ws
 RUN mkdir -p ${ROS_WS}/src
 
-COPY ./your_ros_package ${ROS_WS}/src/your_ros_package
+COPY ./slam_swarm ${ROS_WS}/src/slam_swarm
 
 # Build the workspace
 RUN . /opt/ros/humble/setup.sh && colcon build
