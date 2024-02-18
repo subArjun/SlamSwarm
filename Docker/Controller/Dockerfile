@@ -19,6 +19,7 @@ COPY ./tele_mapping ${ROS_WS}/src/tele_mapping
 #RUN rm -rf /usr/src/gmock && rm -rf /usr/src/gtest
 # Build the workspace
 RUN cd /opt/ros_ws && . /opt/ros/humble/setup.sh && colcon build
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # Custom entrypoint script
 COPY ./ros_entrypoint.sh /
