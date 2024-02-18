@@ -24,10 +24,6 @@ COPY ./your_ros_package ${ROS_WS}/src/your_ros_package
 # Build the workspace
 RUN . /opt/ros/humble/setup.sh && colcon build
 
-ENV ROS_DOMAIN_ID=4
-ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-
-
 # Custom entrypoint script
 COPY ./ros_entrypoint.sh /
 RUN chmod +x /ros_entrypoint.sh 
