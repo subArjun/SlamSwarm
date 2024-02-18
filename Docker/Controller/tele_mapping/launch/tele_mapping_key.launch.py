@@ -11,7 +11,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 description_dir = os.path.join(get_package_share_directory('tele_mapping'), 'description','romipi.urdf.xacro')
 
-config = os.path.join(get_package_share_directory('tele_mapping'), 'config','romipi.yaml'):
+config = os.path.join(get_package_share_directory('tele_mapping'), 'config','romipi.yaml')
 
 
 
