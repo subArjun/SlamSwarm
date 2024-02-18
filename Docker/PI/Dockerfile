@@ -15,10 +15,8 @@ RUN mkdir -p ${ROS_WS}/src
 COPY ./slam_swarm ${ROS_WS}/src/slam_swarm
 
 # Build the workspace
-RUN . /opt/ros/humble/setup.sh && colcon build
+RUN cd /opt/ros_ws && . /opt/ros/humble/setup.sh && colcon build
 
-ENV ROS_DOMAIN_ID=4
-ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # Custom entrypoint script
 COPY ./ros_entrypoint.sh /
