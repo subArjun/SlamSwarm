@@ -17,9 +17,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dockerfile: ./Docker/Controller/Dockerfile
+          - dockerfile: ./Docker/Controller/
             image: docker.io/slamswarm:controller
-          - dockerfile: ./Docker/PI/Dockerfile
+          - dockerfile: ./Docker/PI/
             image: docker.io/slamswarm:pi
     # steps to perform in job
     steps:
