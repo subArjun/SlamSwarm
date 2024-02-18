@@ -16,6 +16,7 @@ ENV ROS_WS=/opt/ros_ws
 RUN mkdir -p ${ROS_WS}/src
 
 COPY ./tele_mapping ${ROS_WS}/src/tele_mapping
+ENV RMW_IMPLEMENTATION = rmw_cyclonedds_cpp
 #RUN rm -rf /usr/src/gmock && rm -rf /usr/src/gtest
 # Build the workspace
 RUN cd /opt/ros_ws && . /opt/ros/humble/setup.sh && colcon build
