@@ -18,9 +18,9 @@ jobs:
       matrix:
         include:
           - dockerfile: ./Docker/Controller/
-            image: docker.io/slamswarm:controller
+            image: assubram/slamswarm:controller
           - dockerfile: ./Docker/PI/
-            image: docker.io/slamswarm:pi
+            image: assubram/slamswarm:pi
     # steps to perform in job
     steps:
       - name: Checkout code
