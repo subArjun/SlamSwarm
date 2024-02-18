@@ -15,11 +15,10 @@ RUN apt-get update && apt-get --assume-yes install -y \
 ENV ROS_WS=/opt/ros_ws
 RUN mkdir -p ${ROS_WS}/src
 
-COPY ./tele_mapping ${ROS_WS}/src/
+COPY ./tele_mapping ${ROS_WS}/src/tele_mapping
 #RUN rm -rf /usr/src/gmock && rm -rf /usr/src/gtest
-WORKDIR /ros_ws
 # Build the workspace
-RUN . /opt/ros/humble/setup.sh && colcon build
+RUN cd /opt/ros_ws && . /opt/ros/humble/setup.sh && colcon build
 
 # Custom entrypoint script
 COPY ./ros_entrypoint.sh /

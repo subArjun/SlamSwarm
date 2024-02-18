@@ -3,12 +3,9 @@ FROM ros:humble
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update && apt-get --assume-yes install -y \
-    build-essential \
     python3-pip \
-    cmake \
-    git \
     python3-rosdep \
-    ros-humble-navigation2 \
+    ros-humble-nav2-bringup \
     python3-smbus
 
 # Create and initialize ROS2 workspace
