@@ -19,7 +19,7 @@ RUN apt-get update && apt-get --assume-yes install -y \
 ENV ROS_WS=/opt/ros_ws
 RUN mkdir -p ${ROS_WS}/src
 
-COPY ./tele_mapping ${ROS_WS}/src/tele_mapping
+COPY ./tele_mapping ${ROS_WS}/src/
 
 # Build the workspace
 RUN . /opt/ros/humble/setup.sh && colcon build
