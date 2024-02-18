@@ -5,13 +5,13 @@ from launch.event_handlers import OnProcessIO, OnProcessStart, OnExecutionComple
 from launch.substitutions import PathJoinSubstitution, FindExecutable
 from launch_ros.substitutions import FindPackageShare
 from ament_index_python import get_package_share_directory
-import xacrom
+import xacro
 import os
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 description_dir = os.path.join(get_package_share_directory('tele_mapping'), 'description','romipi.urdf.xacro')
 
-config = os.path.join(get_package_share_directory('tele_mapping'), 'config','romipi.yaml')
+config = os.path.join(get_package_share_directory('tele_mapping'), 'config','romipi.yaml'):
 
 
 
