@@ -6,7 +6,8 @@ RUN apt-get update && apt-get --assume-yes install -y \
     python3-pip \
     python3-rosdep \
     ros-humble-nav2-bringup \
-    python3-smbus
+    python3-smbus \
+    ros-humble-rmw-cyclonedds-cpp
 
 # Create and initialize ROS2 workspace
 ENV ROS_WS=/opt/ros_ws
