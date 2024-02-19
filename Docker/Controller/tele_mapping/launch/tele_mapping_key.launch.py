@@ -7,7 +7,7 @@ from launch_ros.substitutions import FindPackageShare
 from ament_index_python import get_package_share_directory
 import xacro
 import os
-from launch.launch_description_sources import PythonLaunchDescriptionSource, XMLLaunchDescriptionSource
+from launch.launch_description_sources import PythonLaunchDescriptionSource, FrontendLaunchDescriptionSource
 
 description_dir = os.path.join(get_package_share_directory('tele_mapping'), 'description','romipi.urdf.xacro')
 
@@ -59,7 +59,7 @@ def generate_launch_description():
     )
 	
     foxglove = IncludeLaunchDescription(
-        XMLLaunchDescriptionSource(
+        FrontendLaunchDescriptionSource(
             PathJoinSubstitution([
                 get_package_share_directory('foxglove_bridge'), 'launch', 'foxglove_bridge_launch.xml'
             ])
