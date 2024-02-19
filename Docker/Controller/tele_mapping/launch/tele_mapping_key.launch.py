@@ -58,6 +58,14 @@ def generate_launch_description():
         launch_arguments={'use_sim_time':'false'}.items()
     )
 	
+    slam = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                get_package_share_directory('foxglove_bridge'), 'launch', 'foxglove_bridge_launch.xml'
+            ])
+        ),
+        launch_arguments={'use_sim_time':'false', 'port':'8765'}.items()
+    )
 
 
     return LaunchDescription([

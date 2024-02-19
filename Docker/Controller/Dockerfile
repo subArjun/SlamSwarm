@@ -9,6 +9,7 @@ RUN apt-get update && apt-get --assume-yes install -y \
     ros-humble-nav2-bringup \
     ros-humble-xacro \
     ros-humble-rmw-cyclonedds-cpp \
+    ros-humble-foxglove-bridge \
     python3-rosdep 
 
 # Create and initialize ROS2 workspace
