@@ -21,6 +21,9 @@ jobs:
             image: assubram/slamswarm:controller
           - dockerfile: ./Docker/PI/
             image: assubram/slamswarm:pi
+          - dockerfile: ./Docker/Interface/
+            image: assubram/slamswarm:interface
+          
     # steps to perform in job
     steps:
       - name: Checkout code
