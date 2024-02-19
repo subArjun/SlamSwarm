@@ -5,7 +5,6 @@ from launch.actions import RegisterEventHandler, IncludeLaunchDescription, Execu
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
 from ament_index_python import get_package_share_directory
-import xacro
 import os
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
