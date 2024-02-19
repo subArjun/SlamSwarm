@@ -2,14 +2,16 @@ FROM ros:humble
 
 SHELL ["/bin/bash", "-c"]
 
-RUN apt-get update && apt-get --assume-yes install -y \
+RUN apt-get update &&  \
+    && apt-get --assume-yes install -y \
     python3-pip \
     python3-rosdep \
     ros-humble-nav2-bringup \
     python3-smbus \
     ros-humble-rmw-cyclonedds-cpp \
     ros-humble-rplidar-ros \
-    ros-humble-tf-transformations
+    ros-humble-tf-transformations \
+    && sudo pip3 --assume-yes install transforms3d
 
 # Create and initialize ROS2 workspace
 ENV ROS_WS=/opt/ros_ws
