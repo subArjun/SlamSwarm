@@ -58,13 +58,13 @@ def generate_launch_description():
         launch_arguments={'use_sim_time':'false'}.items()
     )
 	
-    slam = IncludeLaunchDescription(
+    foxglove = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             PathJoinSubstitution([
                 get_package_share_directory('foxglove_bridge'), 'launch', 'foxglove_bridge_launch.xml'
             ])
         ),
-        launch_arguments={'use_sim_time':'false', 'port':'8765'}.items()
+        launch_arguments={'port':'8765'}.items()
     )
 
 
@@ -77,6 +77,10 @@ def generate_launch_description():
         TimerAction(
         	period=15.0,
         	actions=[slam]
+        ),
+        TimerAction(
+        	period=16.0,
+        	actions=[foxglove]
         ),
     ])
 
