@@ -11,7 +11,7 @@ RUN apt-get update &&  \
     ros-humble-rmw-cyclonedds-cpp \
     ros-humble-rplidar-ros \
     ros-humble-tf-transformations \
-    && sudo pip3 --assume-yes install transforms3d
+    && sudo pip3 install transforms3d
 
 # Create and initialize ROS2 workspace
 ENV ROS_WS=/opt/ros_ws
