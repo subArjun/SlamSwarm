@@ -3,7 +3,7 @@ FROM ros:humble
 SHELL ["/bin/bash", "-c"]
 
 RUN apt-get update &&  \
-    && apt-get --assume-yes install -y \
+    apt-get --assume-yes install -y \
     python3-pip \
     python3-rosdep \
     ros-humble-nav2-bringup \
