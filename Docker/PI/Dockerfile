@@ -8,7 +8,8 @@ RUN apt-get update && apt-get --assume-yes install -y \
     ros-humble-nav2-bringup \
     python3-smbus \
     ros-humble-rmw-cyclonedds-cpp \
-    ros-humble-rplidar-ros
+    ros-humble-rplidar-ros \
+    ros-humble-tf-transformations
 
 # Create and initialize ROS2 workspace
 ENV ROS_WS=/opt/ros_ws
